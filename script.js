@@ -13,3 +13,15 @@
     }, false)
   })
 })()
+
+const mode = document.getElementById('colorMode')
+
+function darkMode(){
+  if (mode.checked){
+    document.documentElement.setAttribute('data-bs-theme', 'dark')
+  }else{
+    document.documentElement.removeAttribute('data-bs-theme')
+  }
+
+}
+mode.addEventListener('change', darkMode);
